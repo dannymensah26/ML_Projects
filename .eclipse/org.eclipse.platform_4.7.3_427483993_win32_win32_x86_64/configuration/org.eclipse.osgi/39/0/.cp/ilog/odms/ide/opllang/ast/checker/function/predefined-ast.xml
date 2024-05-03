@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ast>
+  <classes>
+     <class name="Math" isGlobal="true">
+      <methods>
+        <method name="abs"  type="float" argument1="float" javaDoc="/**
+ *  Returns the absolute value of x.
+ * 
+ */" />
+        <method name="max"  type="float" argument1="float" argument2="float" javaDoc="/**
+ *  Math.max(x, y) returns the larger of x and y.
+ * 
+ */" />
+         <method name="min"  type="float" argument1="float" argument2="float" javaDoc="/**
+ *  Math.min(x, y) returns the smallest of x and y.
+ * 
+ */" />
+       <method name="random"  type="float" javaDoc="/**
+ *  Returns a pseudo-random number between 0, inclusive, and 1, exclusive.
+ * 
+ */" />
+ 
+        <method name="ceil"  type="float" argument1="float" javaDoc="/**
+ *  Math.ceil(x) returns the smallest integer value greater than or equal to x.
+ * 
+ */" />
+ 
+        <method name="floor"  type="float" argument1="float" javaDoc="/**
+ *  Math.floor(x) returns the greatest integer value less than or equal to x.
+ * 
+ */" />
+ 
+         <method name="round"  type="float" argument1="float" javaDoc="/**
+ *  Math.round(x) returns the nearest integer value to x.
+ * 
+ */" />
+       
+          <method name="sqrt"  type="float" argument1="float" javaDoc="/**
+ *  Returns the square root of x.
+ * 
+ */" />
+        <method name="sin"  type="float" argument1="float" javaDoc="/**
+ *  Math.sin(x) returns the trigonometric function sine of a radian argument.
+ * 
+ */" />
+
+        <method name="cos"  type="float" argument1="float" javaDoc="/**
+ *  Math.cos(x) returns the trigonometric function cosine of a radian argument.
+ * 
+ */" /> 
+ 
+        <method name="tan"  type="float" argument1="float" javaDoc="/**
+ *  Math.tan(x) returns the trigonometric function tangent of a radian argument.
+ * 
+ */" /> 
+ 
+      <method name="asin"  type="float" argument1="float" javaDoc="/**
+ *  Math.asin(x) returns the arcsine of x in the range -pi/2 to pi/2. 
+ * 
+ */" /> 
+ 
+       <method name="acos"  type="float" argument1="float" javaDoc="/**
+ *  Math.acos(x) returns the arc cosine of x in the range 0 to pi.
+ * 
+ */" /> 
+
+       <method name="atan"  type="float" argument1="float" javaDoc="/**
+ *  Math.atan(x) returns the arc tangent of x in the range -pi/2 to pi/2.
+ * 
+ */" />
+ 
+     <method name="atan"  type="float" argument1="float" javaDoc="/**
+ *  Math.atan(x) returns the arc tangent of x in the range -pi/2 to pi/2.
+ * 
+ */" />    
+ 
+     <method name="atan2"  type="float" argument1="float" argument2="float" javaDoc="/**
+ *  Math.atan2(y, x) converts rectangular coordinates (x, y) to polar coordinates (r, a) by computing a as an arc tangent of y/x in the range -pi to pi.
+ * 
+ */" />    
+ 
+     <method name="exp"  type="float" argument1="float" javaDoc="/**
+ *  Math.exp(x) computes the exponential function.
+ * 
+ */" />     
+
+     <method name="log"  type="float" argument1="float" javaDoc="/**
+ *  Math.log(x) computes the natural logarithm of x.
+ * 
+ */" />     
+  
+       <method name="pow"  type="float" argument1="float" javaDoc="/**
+ *  Math.pow(x, y) computes x raised to the power y.
+ * 
+ */" />     
+      </methods>
+    </class>
+ </classes>
+ <functions>
+        <function name="eval"  isGlobal="true" isVar="false"  type="void"  javaDoc="/**
+ * Executes &lt;code&gt;string&lt;/code&gt; as a program, and returns the value of the 
+ * last evaluated expression. The program in &lt;code&gt;string&lt;/code&gt; can use all 
+ * the features of the language, except that it cannot define functions; 
+ * in other words, the function statement is not allowed in &lt;code&gt;string&lt;/code&gt;.
+ * @example
+ * eval(&quot;2*3&quot;) -&gt; 6
+ * @example
+ * eval(&quot;var i=0; for (var j=0; j&lt;100; j++) i=i+j; i&quot;) -&gt; 4950 
+ * @example
+ * n=25; eval(&quot;Math.sqrt(n)&quot;) -&gt; 5 
+ * @example
+ * eval(&quot;function foo(x) { return x+1 }&quot;) -&gt; error 
+ * @available flow control
+ * @type void
+ * @param string The text to be evaluated
+ * @globalFunction
+ */" >
+      <contexts>
+                <context name="EVAL">        </context>
+                <context name="POST">        </context>
+                <context name="CPLEX">        </context>
+                <context name="CP">        </context>
+      </contexts>
+    </function>
+        <function name="loadFile"  isGlobal="true" isVar="false"  javaDoc="/**
+ * This function loads the script file passed as parameter. 
+ * The path can be either absolute or relative.
+ * In OPL, you have to use includeScript, as the function 
+ * loadFile does not recognize OPL objects, such as &lt;code&gt;thisOplModel&lt;/code&gt;. 
+ * @available flow control
+ * @param path The path of the file to be loaded. 
+ * @deprecated Use includeScript instead
+ * @globalFunction
+ */" >
+      <contexts>
+                <context name="EVAL">        </context>
+                <context name="POST">        </context>
+                <context name="CPLEX">        </context>
+                <context name="CP">        </context>
+      </contexts>
+    </function>
+        <function name="Infinity"  isGlobal="true" isVar="false" >
+      <contexts>
+                <context name="EVAL">        </context>
+                <context name="POST">        </context>
+                <context name="CPLEX">        </context>
+                <context name="CP">        </context>
+      </contexts>
+    </function>
+        <function name="parseInt"  isGlobal="true" isVar="false"  type="int"  javaDoc="/**
+ * Parses &lt;code&gt;string&lt;/code&gt; as an integer written in the given base, 
+ * and returns its value. If the &lt;code&gt;string&lt;/code&gt; does not represent 
+ * a valid integer, NaN is returned. 
+ * Leading white space characters are ignored. If parseInt encounters a 
+ * character that is not a digit in the specified base, it ignores it and 
+ * all succeeding characters and returns the integer value parsed up to that point.
+ * If base is omitted, it is taken to be 10, unless &lt;code&gt;string&lt;/code&gt; starts 
+ * with 0x or 0X, in which case it is parsed in base 16, or with 0, 
+ * in which case it is parsed in base 8.
+ * @example
+ * parseInt(&quot;123&quot;) -&gt; 123
+ * parseInt(&quot;-123&quot;) -&gt; -123
+ * parseInt(&quot;123.45&quot;) -&gt; 123
+ * parseInt(&quot;1001010010110&quot;, 2) -&gt; 4758
+ * parseInt(&quot;a9&quot;, 16) -&gt; 169
+ * parseInt(&quot;0xa9&quot;) -&gt; 169
+ * parseInt(&quot;010&quot;) -&gt; 8
+ * parseInt(&quot;123 poodles&quot;) -&gt; 123
+ * parseInt(&quot;a lot of poodles&quot;) -&gt; NaN
+ *
+ * @available flow control
+ * @type int
+ * @globalFunction
+ */" >
+      <contexts>
+                <context name="EVAL">        </context>
+                <context name="POST">        </context>
+                <context name="CPLEX">        </context>
+                <context name="CP">        </context>
+      </contexts>
+    </function>
+        <function name="parseFloat"  isGlobal="true" isVar="false"  type="float"  javaDoc="/**
+ * Parses &lt;code&gt;string&lt;/code&gt; as a floating-point number and 
+ * return its value. If the &lt;code&gt;string&lt;/code&gt; does not represent a valid 
+ * number, NaN is returned. 
+ * Leading white space characters are ignored. The &lt;code&gt;string&lt;/code&gt;
+ * is parsed up to the first unrecognized character. 
+ * If no number is recognized, the function returns NaN. 
+ *
+ * @example 
+ * parseFloat(&quot;-3.14e-15&quot;) -&gt; -3.14e-15
+ * parseFloat(&quot;-3.14e-15 poodles&quot;) -&gt; -3.14e-15
+ * parseFloat(&quot;a fraction of a poodle&quot;) -&gt; NaN
+ *
+ * @available flow control
+ * @type float
+ * @globalFunction
+ */" >
+      <contexts>
+                <context name="EVAL">        </context>
+                <context name="POST">        </context>
+                <context name="CPLEX">        </context>
+                <context name="CP">        </context>
+      </contexts>
+    </function>
+        <function name="write"  isGlobal="true" isVar="false"  type="void"  javaDoc="/**
+ * Converts the arguments to strings and prints them to the current 
+ * debug output. The implementation depends on the application 
+ * in which IBM ILOG Script is embedded. The function writeln 
+ * prints a newline at the end of the output, while write does not.
+ * @available flow control
+ * @type void
+ * @param arg1 The first arguments to print
+ * @param argN The N arguments to print
+ * @globalFunction
+ */" >
+      <contexts>
+                <context name="EVAL">        </context>
+                <context name="POST">        </context>
+                <context name="CPLEX">        </context>
+                <context name="CP">        </context>
+      </contexts>
+    </function>
+        <function name="writeln"  isGlobal="true" isVar="false"  type="void"  javaDoc="/**
+ * Converts the arguments to strings and prints them to the current 
+ * debug output. The implementation depends on the application 
+ * in which IBM ILOG Script is embedded. The function writeln 
+ * prints a newline at the end of the output, while write does not.
+ * @available flow control
+ * @type void
+ * @param arg1 The first arguments to print
+ * @param argN The N arguments to print
+ * @globalFunction
+ */" >
+      <contexts>
+                <context name="EVAL">        </context>
+                <context name="POST">        </context>
+                <context name="CPLEX">        </context>
+                <context name="CP">        </context>
+      </contexts>
+    </function>
+        <function name="stop"  isGlobal="true" isVar="false"  type="void"  javaDoc="/**
+ * Stops the execution of the program at the current statement and, 
+ * if the debugger is enabled, enters debug mode. 
+ * @globalFunction
+ * @available flow control
+ * @type void
+ */" >
+      <contexts>
+                <context name="EVAL">        </context>
+                <context name="POST">        </context>
+                <context name="CPLEX">        </context>
+                <context name="CP">        </context>
+      </contexts>
+    </function>
+  </functions>
+</ast>
